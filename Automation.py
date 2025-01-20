@@ -21,13 +21,13 @@ def login_to_linkedin():
 #
 
 def send_connection_requests(page):
-        # EG: LINK : -> This is just example link you can change as per your requirement go to search bar and search for the specific details and Copy the url and paste it here 
+        # EG: LINK : -> This is just an example link you can change as per your requirement go to search bar and search for the specific details and Copy the url and paste it here 
         driver.get(f'https://www.linkedin.com/search/results/people/?keywords=cyber%20security%20analyst&origin=SWITCH_SEARCH_VERTICAL&page={page}')
         sleep(3)
 
     # Find and iterate through "Connect" buttons
         connect_buttons = driver.find_elements(By.XPATH, "//button[span[text()='Connect']]")
-        print(len(connect_buttons))
+        print(len(connect_buttons)) 
         for button in connect_buttons:
             button.click()
             sleep(2)
